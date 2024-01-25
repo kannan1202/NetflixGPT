@@ -2,7 +2,7 @@
 - Login/Sign Up page
     - Sign In/Sign Up form
     - Redirect to Browse page
-- Browse Page(Comes only authentication)
+- Browse Page(Comes only after authentication)
     - Header
     - Main movie
         - trailer in Background
