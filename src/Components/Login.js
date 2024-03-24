@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile
 import {auth} from '../utils/Firebase'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
-import { USER_AVATAR } from '../utils/Constants';
+import { BG_URL, USER_AVATAR } from '../utils/Constants';
 
 
 
@@ -69,7 +69,7 @@ const Login = () => {
     <div>
       <Header/>
       <div className='absolute'>
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/9134db96-10d6-4a64-a619-a21da22f8999/a449fabb-05e4-4c8a-b062-b0bec7d03085/IN-en-20240115-trifectadaily-perspective_alpha_website_large.jpg"
+        <img src={BG_URL}
         alt="NetflixGPT-Bg-Img"/>
       </div>
       <form onSubmit={(e)=>{e.preventDefault();}} className='absolute p-12 bg-black w-4/12 my-36 mx-auto right-0 left-0 text-white rounded-md bg-opacity-85'>
