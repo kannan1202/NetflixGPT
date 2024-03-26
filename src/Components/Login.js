@@ -69,10 +69,12 @@ const Login = () => {
     <div>
       <Header/>
       <div className='absolute'>
-        <img src={BG_URL}
+        <img 
+        className='h-screen object-cover md:h-auto'
+        src={BG_URL}
         alt="NetflixGPT-Bg-Img"/>
       </div>
-      <form onSubmit={(e)=>{e.preventDefault();}} className='absolute p-12 bg-black w-4/12 my-36 mx-auto right-0 left-0 text-white rounded-md bg-opacity-85'>
+      <form onSubmit={(e)=>{e.preventDefault();}} className='absolute p-12 bg-black w-full  md:w-4/12 my-36 mx-auto right-0 left-0 text-white rounded-md bg-opacity-85'>
         <h1 className='font-semibold text-3xl py-2'>{isSignInForm? "Sign In": "Sign Up"}</h1>
         {!isSignInForm && (<input ref={name} type='text' placeholder='Username' className='p-4 my-2 w-full rounded-md border border-slate-600 bg-transparent'/>)}
         <input ref={email} type='email' placeholder='Email Address' className='p-4 my-2 w-full rounded-md border border-slate-600 bg-transparent'/>

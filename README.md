@@ -11,6 +11,7 @@
             - movie lists * N 
 - NetflixGPT
     - search bar
+        - multilingual
     - movie suggestions
 
 
