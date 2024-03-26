@@ -5,7 +5,7 @@ import {onAuthStateChanged, signOut} from 'firebase/auth';
 import {auth} from '../utils/Firebase'
 import {addUser,removeUser} from '../utils/userSlice';
 import { LOGO, SUPPORTED_LANGUAGES } from '../utils/Constants';
-import {toggleGPTSearchView} from '../utils/GPTSlice';
+import {addGPTMovieResults, toggleGPTSearchView} from '../utils/GPTSlice';
 import {changeLanguage} from '../utils/configSlice';
 
 
@@ -44,7 +44,11 @@ const Header = () => {
 
   const handleGPTSearchClick = ()=>{
     // Toggle GPT Search.
+    if(!showGPTSearch){
+      dispatch(addGPTMovieResults({gptMovieNames:null,gptMovieResults:null}));
+    }
     dispatch(toggleGPTSearchView());
+
   }
 
   const handleLanguageChange = (e)=>{
